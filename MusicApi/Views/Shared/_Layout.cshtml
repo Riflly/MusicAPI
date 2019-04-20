@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <environment include="Development">
+        <link rel="stylesheet" asp-href-include="/lib/node_modules/foundation-sites/dist/**/*.min.css" asp-href-exclude="**/*-reboot*,**/*-grid*" />
+        <link rel="stylesheet" href="~/css/site.css" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/plugins/foundation.core.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/plugins/foundation.dropdown.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/plugins/foundation.util.keyboard.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/plugins/foundation.util.box.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/plugins/foundation.util.triggers.js"></script>
+
+        @*<script src="~/lib/node_modules/foundation-sites/js/foundation.core.js"></script>
+        <script src="~/lib/node_modules/foundation-sites/js/foundation.dropdown.js"></script>
+        <script src="~/lib/node_modules/foundation-sites/js/foundation.util.keyboard.js"></script>
+        <script src="~/lib/node_modules/foundation-sites/js/foundation.util.box.js"></script>
+        <script src="~/lib/node_modules/foundation-sites/js/foundation.util.triggers.js"></script>*@
+    </environment>
+    <title>SportsStore</title>
+</head>
+<body>
+    @RenderBody()
+</body>
+</html>
