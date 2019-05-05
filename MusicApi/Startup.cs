@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using MusicApi.Models;
 
 namespace MusicApi
 {
@@ -33,6 +35,8 @@ namespace MusicApi
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddDbContext<MusicAPIsContext>(options => options.UseSqlServer(Configuration.GetConnectionString("MusicAPIs")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
