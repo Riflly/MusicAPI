@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace MusicApi.Models
 {
-    public class Models
+    public class Model
     {
     }
 }

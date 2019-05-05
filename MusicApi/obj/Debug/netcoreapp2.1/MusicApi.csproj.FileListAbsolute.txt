@@ -77,7 +77,6 @@ F:\Year3\Software App Dev II\MusicAPI\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\
 F:\Year3\Software App Dev II\MusicAPI\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\MusicApi.dll
 F:\Year3\Software App Dev II\MusicAPI\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\MusicApi.pdb
 F:\Year3\Software App Dev II\MusicAPI\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\MusicApi.csproj.CopyComplete
-F:\Year3\Software App Dev II\MusicAPI\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\MusicApi.csprojAssemblyReference.cache
 C:\Users\ekaburu\Downloads\Delete\MusicAPI\MusicApi\bin\Debug\netcoreapp2.1\MusicApi.deps.json
 C:\Users\ekaburu\Downloads\Delete\MusicAPI\MusicApi\bin\Debug\netcoreapp2.1\MusicApi.runtimeconfig.json
 C:\Users\ekaburu\Downloads\Delete\MusicAPI\MusicApi\bin\Debug\netcoreapp2.1\MusicApi.runtimeconfig.dev.json
@@ -105,3 +104,4 @@ C:\Users\ekaburu\Downloads\Delete\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\Musi
 C:\Users\ekaburu\Downloads\Delete\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\MusicApi.dll
 C:\Users\ekaburu\Downloads\Delete\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\MusicApi.pdb
 C:\Users\ekaburu\Downloads\Delete\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\MusicApi.csproj.CopyComplete
+F:\Year3\Software App Dev II\MusicAPI\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\MusicApi.csprojAssemblyReference.cache
