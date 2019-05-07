@@ -17,59 +17,72 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/plugins/foundation.util.box.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/plugins/foundation.util.triggers.js" defer></script>
         <script src="~/js/site.js?v=1" defer></script>
-
-
-        @*<script src="~/lib/node_modules/foundation-sites/js/foundation.core.js"></script>
-        <script src="~/lib/node_modules/foundation-sites/js/foundation.dropdown.js"></script>
-        <script src="~/lib/node_modules/foundation-sites/js/foundation.util.keyboard.js"></script>
-        <script src="~/lib/node_modules/foundation-sites/js/foundation.util.box.js"></script>
-        <script src="~/lib/node_modules/foundation-sites/js/foundation.util.triggers.js"></script>*@
     </environment>
     <title>MusicApi</title>
 </head>
 <body>
-    <nav class="">
-        <ul class="menu dropdown" data-dropdown-menu style="float:left">
-            <li><a href="#">Home</a></li>
-            <li>
-                <a href="#">Browse</a>
-                <ul class="menu">
-                    <li><a href="#">Genres</a></li>
-                    <li><a href="#">Artists</a></li>
-                    <li><a href="#">Albums</a></li>
-                    <li><a href="#">Songs</a></li>
-                    <li><a href="#">Playlists</a></li>
-                </ul>
-            </li>
-        </ul>
-        <form>
-            <div class="row">
-                <div class="medium-3 columns">
-                    <label class="navlabel">
-                        Username
-                        <input type="text" placeholder="Username" aria-label="Username" name="username">
-                    </label>
+    <div class="row columns">
+        <div class="row columns">
+            @*<div class="topnav" data-responsive-toggle="myTopnav" data-hide-for="medium">
+                <button class="menu-icon" type="button" data-toggle="example-menu"></button>
+                <div class="title-bar-title">Menu</div>
+            </div>
+
+            <div class="top-bar" id="example-menu">
+                <div class="top-bar-left">
+                    <ul class="dropdown menu" data-dropdown-menu>
+                        <li class="menu-text">Site Title</li>
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li><a href="#">Log In/Register </a></li>
+                        <li><a href="#">PortFolio</a></li>
+                    </ul>
                 </div>
-                <div class="medium-3 columns">
-                    <label class="navlabel">
-                        Password
-                        <input type="password" placeholder="Password" aria-label="Password" name="password">
-                    </label>
+                <div class="top-bar-right">
+                    <ul class="menu">
+                        <li><input type="search" placeholder="Search"></li>
+                        <li><button type="button" class="button">Search</button></li>
+                    </ul>
                 </div>
-                <div class="navlabel">
-                    <button id="btnlogin" type="submit" name="loginSubmit">Login</button>
+            </div>*@
+
+            <div class="topnav" data-responsive-toggle="myTopnav" data-hide-for="medium">
+                <button class="menu-icon" type="button" data-toggle="example-menu"></button>
+                <div class="title-bar-title">Menu</div>
+            </div>
+
+            <div class="topnav" id="myTopnav">
+
+                <div class="top-bar-left">
+                    <a href="#home" class="active">Home</a>
+                    <a href="#news">Log In/Register</a>
+                    <a href="#contact">PortFolio</a>
+                    <a href="#about">About</a>
+                </div>
+                <div class="top-bar-right">
+                    <ul class="menu">
+                        <li><input type="search" placeholder="Search"></li>
+                        <li><button type="button" class="button">Search</button></li>
+                    </ul>
                 </div>
             </div>
-                
-                
-                
-        </form>
-    </nav>
-    @RenderBody()
-    <footer>
-        <p>Website developed by Edwin Kaburu, Patrick Mayer, and Kevin Stewart</p>
-        <p>Use of any 3rd party content on this site is for demonstration purposes only.</p>
-    </footer>
+        </div>
+
+        <br /> <hr />
+
+        @RenderBody()
+
+        <hr />
+        <br /><br />
+
+        <footer style="background-color:#232323">
+            <p>Website developed by Edwin Kaburu, Patrick Mayer, and Kevin Stewart</p>
+            <p>Use of any 3rd party content on this site is for demonstration purposes only.</p>
+        </footer>
+
+    </div>
+    
 </body>
 
 </html>
