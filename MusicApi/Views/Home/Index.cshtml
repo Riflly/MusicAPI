@@ -1,52 +1,29 @@
-﻿
+﻿@model IEnumerable<Album>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
+    
 }
 
-<ul class="menu align-right">
-    <li><a href="#">One</a></li>
-    <li><a href="#">Two</a></li>
-    <li><a href="#">Three</a></li>
-    <li><a href="#">Four</a></li>
-</ul>
-<br />
-<div class="card" style="width: 300px;">
-    <div class="card-divider">
-        This is a header
-    </div>
-    <img src="~/images/banner2.svg">
-    <div class="card-section">
-        <h4>This is a card.</h4>
-        <p>It has an easy to override visual style, and is appropriately subdued.</p>
-    </div>
-</div>
+<div class="row">
+    @foreach (var item in Model)
+    {
 
-<br /><p> Drop Down </p> <hr />
-<button class="button" type="button" data-toggle="example-dropdown">Toggle Dropdown</button>
-<div class="dropdown-pane" id="example-dropdown" data-dropdown data-auto-focus="true">
-    Example form in a dropdown.
-    <form>
-        <div class="grid-container">
-            <div class="grid-x grid-margin-x">
-                <div class="cell medium-6">
-                    <label>
-                        Name
-                        <input type="text" placeholder="Kirk, James T.">
-                    </label>
-                </div>
-                <div class="cell medium-6">
-                    <label>
-                        Rank
-                        <input type="text" placeholder="Captain">
-                    </label>
-                </div>
+        //Byte data for both music and photos
+        string imgMusic = string.Format("data:image/gif;base64,{0}", Convert.ToBase64String(item.AlbumPicture.PictureOne));
+
+        // string audio = string.Format("data:audio/mpeg;base64,{0}", Convert.ToBase64String(Model.MusicData.MusicDatas));
+        <div class="large-6 columns">
+            <img class="thumbnail" src="@imgMusic" height="350" width="789">
+            <div style="color:#ffffff">
+                <div style="font-size:larger">
+                    <p>Album Name: @item.AlbumName </p>
+                    <p>By @item.Artist.ArtistName</p>
+                </div>                
             </div>
         </div>
-    </form>
+    }
+  
 </div>
 
-<button class="button" type="button" data-toggle="example-dropdown-1">Hoverable Dropdown</button>
-<div class="dropdown-pane" id="example-dropdown-1" data-dropdown data-hover="true" data-hover-pane="true">
-    Just some junk that needs to be said. Or not. Your choice.
-</div>
