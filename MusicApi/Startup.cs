@@ -10,15 +10,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.DependencyInjection;
 using MusicApi.Models;
-using Microsoft.Extensions.Configuration;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
-using MusicApi.Models;
 using MusicApi.Infrastructure;
 
 namespace MusicApi
@@ -45,14 +38,26 @@ namespace MusicApi
 
             //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            //services.AddDbContext<MusicAPIsContext>(options => options.UseSqlServer(Configuration.GetConnectionString("MusicAPIs")));
+            services.AddDbContext<MusicAPIsContext>(options => options.UseSqlServer(Configuration.GetConnectionString("MusicAPIs")));
+            //Assigning custom classes to Identity for Users and Roles
+            services.AddIdentity<User, UserRole>().AddDefaultTokenProviders();
+            //Using custom storage provider for users
+            services.AddTransient<IUserStore<User>, UserStore>();
+            //Using custom storage provider for roles
+            services.AddTransient<IRoleStore<UserRole>, RoleStore>();
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.Cookie.HttpOnly = true;
+                options.LoginPath = "/Login";
+                options.LogoutPath = "/Logout";
+            });
 
-            services.AddDbContext<MusicAPIsContext>(option =>
-            option.UseSqlServer(
-                Configuration["Data:SportsStoreProducts:ConnectionString"]));
+            //services.AddDbContext<MusicAPIsContext>(option =>
+            //option.UseSqlServer(
+            //    Configuration["Data:SportsStoreProducts:ConnectionString"]));
 
-         //   services.AddDbContext<AppIdentityDbContext>(options => options.UseSqlServer(Configuration["Data:SportsStoreProducts:ConnectionString"]));
-           /// services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AppIdentityDbContext>().AddDefaultTokenProviders();
+            //   services.AddDbContext<AppIdentityDbContext>(options => options.UseSqlServer(Configuration["Data:SportsStoreProducts:ConnectionString"]));
+            /// services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AppIdentityDbContext>().AddDefaultTokenProviders();
 
             services.AddTransient<IProductRepo, EFProductRepository>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
@@ -62,11 +67,20 @@ namespace MusicApi
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, MusicAPIsContext db, SignInManager<User> s)
         {
             if (env.IsDevelopment())
             {
+                User user = s.UserManager.FindByNameAsync("dev").Result;
                 app.UseDeveloperExceptionPage();
+                if (s.UserManager.FindByNameAsync("dev").Result == null)
+                {
+                    var result = s.UserManager.CreateAsync(new User
+                    {
+                        UserName = "dev",
+                        UserEmail = "dev@app.com"
+                    }, "Aut94L#G-a").Result;
+                }
             }
             else
             {
@@ -83,6 +97,8 @@ namespace MusicApi
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+                routes.MapSpaFallbackRoute("spa-fallback", new { controller = "Home", action = "Index" });
+
             });
         }
     }
