@@ -25,6 +25,8 @@ namespace MusicApi.Models
         public virtual DbSet<SongData> TblSongData { get; set; }
         public virtual DbSet<User> TblUser { get; set; }
         public virtual DbSet<UserPlaylist> TblUserPlaylist { get; set; }
+        public virtual DbSet<Role> TblRole { get; set; }
+        public virtual DbSet<UserRole> TblUserRole { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -201,7 +203,7 @@ namespace MusicApi.Models
 
                 entity.Property(e => e.UserName).HasMaxLength(40);
 
-                entity.Property(e => e.UserPassword).HasColumnType("text");
+                entity.Property(e => e.UserPasswordHash).HasColumnType("text");
 
                 entity.HasOne(d => d.FavGenre)
                     .WithMany(p => p.TblUser)

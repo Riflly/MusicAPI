@@ -1,0 +1,19 @@
+﻿@model RegisterModel
+
+<div>
+    <h4>Login</h4>
+</div>
+<div asp-validation-summary="All"></div>
+<form asp-action="Register" method="post">
+    <div>
+        <label asp-for="Name"></label>
+        <input asp-for="Name" />
+    </div>
+    <div>
+        <label asp-for="Password"></label>
+        <input asp-for="Password" />
+    </div>
+    <button type="submit">Submit Login</button>
+    <a asp-action="Register">Register New Account</a>
+    <a asp-action="Index">Cancel</a>
+</form>
