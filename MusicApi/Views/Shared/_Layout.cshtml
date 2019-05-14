@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width" />
     <environment include="Development">
         <link rel="stylesheet" asp-href-include="/lib/node_modules/foundation-sites/dist/**/*.min.css" asp-href-exclude="**/*-reboot*,**/*-grid*" />
-        <link rel="stylesheet" href="~/css/site.css?v=2" />
+        <link rel="stylesheet" href="~/css/site.css?v=3" />
 
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
@@ -57,6 +57,7 @@
                 <div class="top-bar-left">
                     <a asp-controller="Home" asp-action="Index" class="active">Home</a>
                     <a asp-controller="Account" asp-action="Login">Log In/Register</a>
+                    <a asp-controller="Create" asp-action="CreateArtist">Create</a>
                     <a href="#contact">PortFolio</a>
                     <a href="#about">About</a>
                 </div>
@@ -70,7 +71,6 @@
         </div>
 
         <br /> <hr />
-
         @RenderBody()
 
         <hr />

@@ -187,4 +187,8 @@ E:\Year3\Software App Dev II\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\MusicApi.
 E:\Year3\Software App Dev II\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\MusicApi.csproj.CopyComplete
 F:\Year3\Software App Dev II\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\Razor\Views\Account\Register.g.cshtml.cs
 F:\Year3\Software App Dev II\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\Razor\Views\Account\Login.g.cshtml.cs
+F:\Year3\Software App Dev II\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\Razor\Views\Create\CreateArtist.g.cshtml.cs
 F:\Year3\Software App Dev II\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\MusicApi.csprojAssemblyReference.cache
+F:\Year3\Software App Dev II\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CreatePartial.g.cshtml.cs
+F:\Year3\Software App Dev II\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\Razor\Views\Create\CreateAlbum.g.cshtml.cs
+F:\Year3\Software App Dev II\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\Razor\Views\Create\CreateSong.g.cshtml.cs

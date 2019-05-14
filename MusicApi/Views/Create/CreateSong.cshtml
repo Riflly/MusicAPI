@@ -1,0 +1,37 @@
+﻿@model CreateSongModel
+@await Html.PartialAsync("_CreatePartial")
+<div>
+    <h4>Create Song</h4>
+</div>
+<div asp-validation-summary="All"></div>
+<form asp-action="CreateSong" method="post" enctype="multipart/form-data">
+    <div>
+        <label class="createLabel" asp-for="SongName"></label>
+        <input asp-for="SongName" />
+    </div>
+    <div>
+        <label class="createLabel" asp-for="AlbumId"></label>
+        <select id="trackNum" asp-for="AlbumId">
+            @{
+                foreach (var item in ViewBag.Albums)
+                {
+                    <option value="@item.AlbumId">@item.AlbumName</option>
+                }
+            }
+        </select>
+    </div>
+    <div>
+        <label class="createLabel" asp-for="TrackNum"></label>
+        <input type="number" asp-for="TrackNum" />
+    </div>
+    <div>
+        <label class="createLabel" asp-for="SongData"></label>
+        <input type="file" asp-for="SongData" />
+    </div>
+    <div>
+        <label class="createLabel" asp-for="VideoLink"></label>
+        <input asp-for="VideoLink" />
+    </div>
+    <button type="submit" class="button">Create New Song</button>
+    <a asp-action="Index">Cancel</a>
+</form>
