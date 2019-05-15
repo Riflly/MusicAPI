@@ -1,0 +1,48 @@
+﻿@model CreateAlbumModel
+@await Html.PartialAsync("_CreatePartial")
+<div>
+    <h4>Create Album</h4>
+</div>
+<div asp-validation-summary="All"></div>
+<form asp-action="CreateAlbum" method="post" enctype="multipart/form-data">
+    <div>
+        <label class="createLabel" asp-for="AlbumName"></label>
+        <input asp-for="AlbumName" />
+    </div>
+    <div>
+        <label class="createLabel" asp-for="ArtistId"></label>
+        <select id="artist" asp-for="ArtistId">
+            @{
+                foreach (var item in ViewBag.Artists)
+                {
+                    <option value="@item.ArtistId">@item.ArtistName</option>
+                }
+            }
+        </select>
+    </div>
+    <div>
+        <label class="createLabel" asp-for="GenreId"></label>
+        <select id="genres" asp-for="GenreId">
+            @{
+                foreach (var item in ViewBag.Genres)
+                {
+                    <option value="@item.GenreId">@item.GenreName</option>
+                }
+            }
+        </select>
+    </div>
+    <div>
+        <label class="createLabel" asp-for="ReleaseYear"></label>
+        <input type="number" asp-for="ReleaseYear"/>
+    </div>
+    <div>
+        <label class="createLabel" asp-for="PictureOne"></label>
+        <input type="file" asp-for="PictureOne" />
+    </div>
+    <div>
+        <label class="createLabel" asp-for="PictureTwo"></label>
+        <input type="file" asp-for="PictureTwo" />
+    </div>
+    <button type="submit" class="button">Create New Album</button>
+    <a asp-action="Index">Cancel</a>
+</form>

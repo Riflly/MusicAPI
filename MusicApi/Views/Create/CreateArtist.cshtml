@@ -1,0 +1,26 @@
+﻿@model CreateArtistModel
+@await Html.PartialAsync("_CreatePartial")
+<div>
+    <h4>Create Artist</h4>
+</div>
+<div asp-validation-summary="All"></div>
+<form asp-action="CreateArtist" method="post" enctype="multipart/form-data">
+    <div>
+        <label class="createLabel" asp-for="ArtistName"></label>
+        <input asp-for="ArtistName" />
+    </div>
+    <div>
+        <label class="createLabel" asp-for="ArtistBio"></label>
+        <input asp-for="ArtistBio" />
+    </div>
+    <div>
+        <label class="createLabel" asp-for="PictureOne"></label>
+        <input type="file" asp-for="PictureOne" />
+    </div>
+    <div>
+        <label class="createLabel" asp-for="PictureTwo"></label>
+        <input type="file" asp-for="PictureTwo" />
+    </div>
+    <button type="submit" class="button">Create New Artist</button>
+    <a asp-action="Index">Cancel</a>
+</form>
