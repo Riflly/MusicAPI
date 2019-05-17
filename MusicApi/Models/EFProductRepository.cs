@@ -25,6 +25,36 @@ namespace MusicApi.Models
 
         public IQueryable<ArtistPicture> ArtistPictures => context.TblArtistPicture;
 
+        public IQueryable<User> Users => context.TblUser;
+
+        public IQueryable<Song> Songs => context.TblSong;
+
+        public IQueryable<SongData> SongDatas => context.TblSongData;
+
+        public IQueryable<UserPlaylist> UserPlaylists
+        {
+            get { return context.TblUserPlaylist; }
+        }
+
+        public async Task<bool> CreateUserPlaylist(UserPlaylist playlist)
+        {
+            context.Add(playlist);
+
+            await context.SaveChangesAsync();
+
+            return await Task.FromResult(true);
+            //await conte
+            //throw new NotImplementedException();
+        }
+
+        public async Task<bool> CreatePlayListItem(PlaylistItem playlistItem)
+        {
+            context.Add(playlistItem);
+
+            await context.SaveChangesAsync();
+
+            return await Task.FromResult(true);
+        }
         public async Task<bool> CreateArtistPicAsync(ArtistPicture artistPic)
         {
             context.Add(artistPic);

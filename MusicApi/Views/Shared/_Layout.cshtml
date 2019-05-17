@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width" />
     <environment include="Development">
         <link rel="stylesheet" asp-href-include="/lib/node_modules/foundation-sites/dist/**/*.min.css" asp-href-exclude="**/*-reboot*,**/*-grid*" />
+        <link rel="stylesheet" asp-href-include="/lib/node_modules/foundation-icons/**/*.css" />
         <link rel="stylesheet" href="~/css/site.css?v=3" />
 
 
@@ -58,7 +59,7 @@
                     <a asp-controller="Home" asp-action="Index" class="active">Home</a>
                     <a asp-controller="Account" asp-action="Login">Log In/Register</a>
                     <a asp-controller="Create" asp-action="CreateArtist">Create</a>
-                    <a href="#contact">PortFolio</a>
+                    <a asp-controller="Home" asp-action="UserPlaylistCreate">PortFolio</a>
                     <a href="#about">About</a>
                 </div>
                 <div class="top-bar-right">
