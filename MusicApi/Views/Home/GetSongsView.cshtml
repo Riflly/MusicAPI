@@ -1,0 +1,135 @@
+﻿@model ListView
+@{
+    ViewData["Title"] = "GetSongsView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    string link = String.Empty;
+    int id = 0;
+}
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.foundation.min.css" />
+
+<style>
+    table, th, td {
+        border: 0.5px solid white !important;
+    }
+    /*td {
+        height: 40px;
+    }*/
+    tr {
+        background-color: #363636 !important;
+        color: white;
+    }
+
+    th {
+        background-color: #363636 !important;
+        color: white;
+    }
+
+    #changeColor {
+        background-color: #ff0000 !important;
+        color: #ff6a00 !important;
+    }
+</style>
+
+<div class="row">
+    <div class="large-5 columns">
+        @{
+            string imgMusic = string.Format("data:image/gif;base64,{0}", Convert.ToBase64String(Model.Songs.ToList()[0].Album.AlbumPicture.PictureOne));
+            <img class="thumbnail" src="@imgMusic" style="height:350px; width:590px;">
+        }
+    </div>
+    <div class="large-7 columns">
+        <table class="hover">
+            <thead>
+                <tr>
+                    @*<th width="200">Table Header</th>
+                        <th>Table Header</th>
+                        <th width="150">Table Header</th>
+                        <th width="150">Table Header</th>*@
+                    <th>Video</th>
+                    <th>MP3</th>
+                    <th>Title</th>
+                    <th>Artist</th>
+                    <th>Album</th>
+                    <th>Release</th>
+                    <th>Add</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Songs)
+                {
+                    <tr class="hover1">
+
+                        <td>
+                            <i class="step fi-video size-72" style="width:auto" data-open="exampleModal1"></i>
+                        </td>
+                        <td>
+                            <audio controls loop>
+                                <source src="@string.Format("data:audio/mpeg;base64,{0}", Convert.ToBase64String(item.SongData.Data))" />
+                            </audio>
+                        </td>
+                        <td>@item.SongName</td>
+                        <td>@item.Album.Artist.ArtistName</td>
+                        <td>@item.Album.AlbumName</td>
+                        <td>@item.Album.ReleaseYear</td>
+                        <td>
+                            <i class="fi-thumbnails size-72" data-open="exampleModal2"></i>
+                        </td>
+                        @*<th hidden>*@
+                        @*<div>
+                                <a asp-controller="Home" asp-action="AddSongItem" asp-route-id="songName" asp-route-userName="@item.SongName" >as</a>
+                            </div>*@
+                        @*<p class="step fi-star size-72" style="width:auto;"></p>*@
+                        @*<div>
+                                <a asp-controller="Home" asp-action="AddSongItem" asp-route="songName" class="step fi-star size-72"></a>
+                            </div>*@
+
+                        @*<i id="changeColor" class="step fi-star size-72" style="width:auto;" ></i>*@
+                        @*</th>*@
+                    </tr>
+                    link = item.VideoLink;
+                    id = item.SongId;
+                }
+
+            </tbody>
+        </table>
+
+    </div>
+
+
+
+    <div class="reveal" id="exampleModal1" data-reveal>
+        <div class="responsive-embed widescreen">
+            <iframe width="560" height="315" src="@link" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <div style="background-color:#1e1e1e; color:white" class="reveal" id="exampleModal2" data-reveal>
+        <h4>Your Playlist</h4>
+        <hr />
+        <ul class="accordion" data-accordion>
+            @foreach (var playitem in Model.UserPlaylists)
+            {
+                <li class="accordion-item" data-accordion-item>
+                    <a href="#" class="accordion-title">&nbsp;&nbsp;PlayList Number @playitem.PlaylistId</a>
+                    <div class="accordion-content" data-tab-content>
+                        <p>Playlist Name:&nbsp;@playitem.PlaylistName</p>
+                        <p>Playlist Description:&nbsp;@playitem.PlaylistDesc</p>
+                        <a onclick="location.href='@(Url.Action("AddSongItem","Home", new { playlistID = playitem.PlaylistId, songName = id}))'">Add Song To This Playlist</a>
+                    </div>
+                </li>
+            }
+        </ul>
+        <div style="flex: 0 0 75%" id="color_change">
+            <a asp-controller="Home" asp-action="UserPlaylistCreate">Create new Playlist</a>
+        </div>
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+</div>
+

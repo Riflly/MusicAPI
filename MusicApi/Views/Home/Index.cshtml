@@ -7,24 +7,35 @@
 
 }
 
+<button asp-controller="Account" asp-action="UserPlaylistCreate">Create User Playlist</button>
 <div class="row">
     @foreach (var item in Model)
-                {
+    {
 
-                    //Byte data for both music and photos
-                    string imgMusic = string.Format("data:image/gif;base64,{0}", Convert.ToBase64String(item.AlbumPicture.PictureOne));
+        //Byte data for both music and photos
+        string imgMusic = string.Format("data:image/gif;base64,{0}", Convert.ToBase64String(item.AlbumPicture.PictureOne));
 
-            // string audio = string.Format("data:audio/mpeg;base64,{0}", Convert.ToBase64String(Model.MusicData.MusicDatas));
-            <div class="large-6 columns">
-                <img class="thumbnail" src="@imgMusic" height="350" width="789">
-                <div style="color:#ffffff">
-                    <div style="font-size:larger">
-                        <p>Album Name: @item.AlbumName </p>
-                        <p>By @item.Artist.ArtistName</p>
+        // string audio = string.Format("data:audio/mpeg;base64,{0}", Convert.ToBase64String(Model.MusicData.MusicDatas));
+        <div class="large-6 columns">
+            <img class="thumbnail" src="@imgMusic" style="height:350px; width:590px;">
+            <div style="color:#ffffff">
+                <div style="display:flex; justify-content:center;">
+                    <div style="flex:1;" id="text_one">
+                        <b>@item.AlbumName</b>
+                    </div>
+                    <div style="flex: 0 0 75%" id="color_change">
+                        <button type="button" class="button secondary" id="btn1" onclick="location.href='@(Url.Action("GetSongsView","Home", new { com = item.AlbumName }))'">Go To @item.AlbumName BY @item.Artist.ArtistName</button>
                     </div>
                 </div>
+                @*<div style="font-size:larger">
+                        <p>Album Name: @item.AlbumName </p>
+                        <p>By @item.Artist.ArtistName</p>
+                        <button type="submit" onclick="location.href='@(Url.Action("GetSongsView","Home", new { com = item.AlbumName }))'">Go</button>
+                    </div>*@
             </div>
-                                        }
+        </div>
+    }
+
 
 </div>
 

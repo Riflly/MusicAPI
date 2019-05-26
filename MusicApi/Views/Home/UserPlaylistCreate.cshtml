@@ -1,0 +1,25 @@
+﻿@model UserPlaylist
+@{
+    ViewData["Title"] = "UserPlaylistCreate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    //  int userIDs = int.Parse( ViewData["UserIDs"]);
+
+    int userIDs = int.Parse(ViewBag.userIDs);
+}
+<h4></h4>
+<div asp-validation-summary="All"></div>
+<form asp-controller="Home" asp-action="UserPlaylistCreate" method="post">
+    <div>
+        <label asp-for="PlaylistName" style="color:#ffffff"></label>
+        <input asp-for="PlaylistName" style="color:#ffffff" />
+    </div>
+    <div>
+        <label asp-for="PlaylistDesc" style="color:#ffffff"></label>
+        <input asp-for="PlaylistDesc" style="color:#ffffff" />
+    </div>
+    <div hidden>
+        <input asp-for="UserId" value="@userIDs" hidden />
+    </div>
+    <button type="submit" id="btn1" style="color:#ffffff">Submit</button>
+</form>
+

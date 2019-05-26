@@ -13,6 +13,19 @@ namespace MusicApi.Infrastructure
         IQueryable<Artist> Artists { get; }
         IQueryable<ArtistPicture> ArtistPictures { get; }
         IQueryable<GenreCategory> Genres { get; }
+
+        IQueryable<User> Users { get; }
+
+        IQueryable<UserPlaylist> UserPlaylists { get; }
+
+        IQueryable<Song> Songs { get; }
+
+        IQueryable<SongData> SongDatas { get; }
+
+        Task<bool> CreateUserPlaylist(UserPlaylist playlist);
+
+        Task<bool> CreatePlayListItem(PlaylistItem playlistItem);
+
         Task<bool> CreateArtistPicAsync(ArtistPicture artistPic);
 
         Task<bool> CreateArtistAsync(Artist artist);

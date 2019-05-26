@@ -192,3 +192,37 @@ F:\Year3\Software App Dev II\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\MusicApi.
 F:\Year3\Software App Dev II\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CreatePartial.g.cshtml.cs
 F:\Year3\Software App Dev II\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\Razor\Views\Create\CreateAlbum.g.cshtml.cs
 F:\Year3\Software App Dev II\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\Razor\Views\Create\CreateSong.g.cshtml.cs
+C:\MusicProject\MusicAPI\MusicApi\bin\Debug\netcoreapp2.1\MusicApi.deps.json
+C:\MusicProject\MusicAPI\MusicApi\bin\Debug\netcoreapp2.1\MusicApi.runtimeconfig.json
+C:\MusicProject\MusicAPI\MusicApi\bin\Debug\netcoreapp2.1\MusicApi.runtimeconfig.dev.json
+C:\MusicProject\MusicAPI\MusicApi\bin\Debug\netcoreapp2.1\MusicApi.dll
+C:\MusicProject\MusicAPI\MusicApi\bin\Debug\netcoreapp2.1\MusicApi.pdb
+C:\MusicProject\MusicAPI\MusicApi\bin\Debug\netcoreapp2.1\MusicApi.Views.dll
+C:\MusicProject\MusicAPI\MusicApi\bin\Debug\netcoreapp2.1\MusicApi.Views.pdb
+C:\MusicProject\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\MusicApi.csproj.CoreCompileInputs.cache
+C:\MusicProject\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\MusicApi.RazorAssemblyInfo.cache
+C:\MusicProject\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\MusicApi.RazorAssemblyInfo.cs
+C:\MusicProject\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\MusicApi.AssemblyInfoInputs.cache
+C:\MusicProject\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\MusicApi.AssemblyInfo.cs
+C:\MusicProject\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\MusicApi.TagHelpers.input.cache
+C:\MusicProject\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\MusicApi.TagHelpers.output.cache
+C:\MusicProject\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\MusicApi.RazorCoreGenerate.cache
+C:\MusicProject\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\Razor\Views\Account\Login.g.cshtml.cs
+C:\MusicProject\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\Razor\Views\Account\Register.g.cshtml.cs
+C:\MusicProject\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\Razor\Views\Create\CreateAlbum.g.cshtml.cs
+C:\MusicProject\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\Razor\Views\Create\CreateArtist.g.cshtml.cs
+C:\MusicProject\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\Razor\Views\Create\CreateSong.g.cshtml.cs
+C:\MusicProject\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\MusicProject\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CreatePartial.g.cshtml.cs
+C:\MusicProject\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\MusicProject\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\MusicProject\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+C:\MusicProject\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+C:\MusicProject\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\MusicApi.RazorTargetAssemblyInfo.cache
+C:\MusicProject\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\MusicApi.RazorTargetAssemblyInfo.cs
+C:\MusicProject\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\MusicApi.Views.pdb
+C:\MusicProject\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\MusicApi.dll
+C:\MusicProject\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\MusicApi.pdb
+C:\MusicProject\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\MusicApi.csproj.CopyComplete
+C:\MusicProject\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\Razor\Views\Home\GetSongsView.g.cshtml.cs
+C:\MusicProject\MusicAPI\MusicApi\obj\Debug\netcoreapp2.1\Razor\Views\Home\UserPlaylistCreate.g.cshtml.cs

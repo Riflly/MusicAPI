@@ -8,7 +8,11 @@ namespace MusicApi.Infrastructure
 {
     public class ListView
     {
-        public IEnumerable<Album> _albums { get; }
-        public IEnumerable<AlbumPicture> _albumPictures { get; }
+        //public IEnumerable<Album> _albums { get; }
+        //public IEnumerable<AlbumPicture> _albumPictures { get; }
+
+        public IEnumerable<Song> Songs { get; set; }
+
+        public IEnumerable<UserPlaylist> UserPlaylists { get; set; }
     }
 }
