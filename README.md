@@ -6,7 +6,7 @@ Music Api is an audio streaming web application site in its infancy,
 - Users are able to register/login and create and listen to custom playlist that contain music/songs.
 - Import music file and image file from local machine to database where they are stored accordingly
 
-Developers
+# Developers
 Edwin Kaburu - https://github.com/EdwinKaburu
 
 Patrick Mayer - https://github.com/PatrickMayer97
